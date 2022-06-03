@@ -1,0 +1,147 @@
+.footer {
+    padding: 60px 215px;
+
+    background-color: $background-color;
+}
+
+
+.logo__footer {
+    color: $primary-white-color;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+// Address
+
+.address__item {
+    margin-bottom: 9px;
+    height: 21px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.address__list {
+    width: 231px;
+}
+
+.address__link-address {
+    color: $primary-white-color;
+
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+.address__link {
+    padding: 0;
+    color: $grey-light-color;
+
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.03em;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-duration: 250ms;
+    transition-property: color;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+// social
+
+.footer .container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__social {
+    margin-left: 70px;
+}
+
+.footer__social-list {
+    display: flex;
+}
+
+.footer__social-item {
+    display: flex;
+
+        &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.socials__link--dark {
+    @extend.socials__link;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $primary-white-color;
+    transition-property: background-color;
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+// form
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 93px;
+    width: 570px;
+}
+
+.form__block {
+    display: flex;
+    align-items: flex-end;
+}
+
+.form__input {
+    font-size: 16px;
+    padding: 15px 10px 15px 16px;
+    width: 100%;
+
+    background: $background-color;
+    color: $background-color-for-hero;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: transparent;
+    transition-property: solid;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        border: 1px solid $accent-color;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.form__button  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+
+    padding: 10px 28px 10px 29px ;
+
+    fill: $primary-white-color;
+}
+
+.form__icon {
+    padding: 0;
+    margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+// utils
+
+@import "./utils/normalize";
+@import "./utils/variables";
+
+// base
+
+@import "./base/base";
+@import  "./base/container";
+
+// components
+
+@import "./components/logo";
+@import "./components/page-header";
+@import "./components/hero";
+@import "./components/button";
+@import "./components/feature";
+@import "./components/services";
+@import "./components/team";
+@import "./components/socials";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/filter";
+@import "./components/portfolio";

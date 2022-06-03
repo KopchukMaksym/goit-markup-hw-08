@@ -1,0 +1,21 @@
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.socials__link--light{
+    @extend .socials__link;
+    fill: #AFB1B8;
+    transition-property: background-color, fill;
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        fill: $primary-white-color;
+    }
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 10px;
+}
