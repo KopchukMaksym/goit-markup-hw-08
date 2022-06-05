@@ -32,15 +32,36 @@
         <a href="./" class="logo link" aria-label="WebStudio">
           <span class="logo-name">Web</span>Studio
         </a>
-        <ul class="nav__list list">
+
+        <!-- Burger-button -->
+
+        <button class="menu is-open" 
+        type="button" 
+        aria-expanded="false"
+        data-menu-button>
+          <svg class="menu__icon" width="40px" height="40px" aria-label="Переключатель мобильного меню">
+            <use class="menu__link--open" href="./images/icons.svg#icon-menu"></use>
+            <use class="menu__link--close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container"
+        data-menu>
+          Lorem ipsum dolor sit amet consectetur.
+        </div>
+
+
+        <!-- nav -->
+
+        <!-- <ul class="nav__list list">
           <li class="nav__item"><a href="" class="nav__link link current" aria-label="Студия">Студия</a></li>
           <li class="nav__item"><a href="./portfolio.html" class="nav__link link" aria-label="Портфолио">Портфолио</a></li>
           <li class="nav__item"><a href="" class="nav__link link" aria-label="Контакты">Контакты</a></li>
         </ul>
-        <a></a>
+        <a></a> -->
       </nav>
 
-      <ul class="contacts list">
+      <!-- <ul class="contacts list">
         <li class="contacts__item">
           <a href="mailto:info@devstudio.com" class="contacts__link link " aria-label="Mail">
             <svg class="contacts__icon"
@@ -59,7 +80,7 @@
             </svg>+38 096 111 11 11
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </header>
 
@@ -69,12 +90,12 @@
 
 <!-- Hero -->
 
-    <section class="hero">
+    <!-- <section class="hero">
       <div class=" hero__container container ">
         <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
         <button class="button" type="button" data-modal-open >Заказать услугу</button>
       </div>
-    </section>
+    </section> -->
 
 <!-- Feature -->
 
@@ -390,11 +411,11 @@
   </ul>
 </div>
 </section>
-  </main>
 
 <!-- Footer -->
+</main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div>
         <a href="./" class="logo logo__footer link" aria-label="WebStudio">
@@ -462,11 +483,11 @@
         </form>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 <!-- Modal -->
 
-  <div class="backdrop is-hidden" data-modal>
+  <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
 
 
@@ -534,8 +555,9 @@
         </svg>
       </button>
     </div>
-  </div>
+  </div> -->
 
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

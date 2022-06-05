@@ -96,3 +96,26 @@
 .contacts__icon {
     margin-right: 10px;
 }
+
+
+
+.menu {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.menu .menu__link--close {
+    display: none;
+}
+
+.menu.is-open .menu__link--close {
+    display: block;
+}
+.menu.is-open .menu__link--open {
+    display: none;
+}
+
+
