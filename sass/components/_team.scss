@@ -1,12 +1,10 @@
 .team {
     background-color: #F5F4FA;
 
-    @media screen and (min-width: $mobile) {
-        
-    }
-    @media screen and (min-width :$tablet) {
-        
-    }
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width :$tablet) {}
+
     @media screen and (min-width :$desktop) {
         padding: 94px 0;
 
@@ -19,12 +17,12 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: -15px;
-    @media screen and (min-width: $mobile) {
-    }
-    @media screen and (min-width :$tablet) {
-    }
-    @media screen and (min-width :$desktop) {
-    }
+
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width :$tablet) {}
+
+    @media screen and (min-width :$desktop) {}
 
 }
 
@@ -34,33 +32,38 @@
     border-radius: 0px 0px 4px 4px;
     margin: 15px;
 
-        @media screen and (min-width: $mobile) {
-            max-width: 450px;
-            flex-basis: calc((100%-30px)/1);
+    @include media (mobile) {
+        max-width: 450px;
+        flex-basis: calc((100% - 30px)/1);
         // margin-bottom: 30px;
     }
+
     @media screen and (min-width :$tablet) {
         max-width: 354px;
-        flex-basis: calc((100%-60px)/2);
+        flex-basis: calc((100% - 60px)/2);
     }
+
     @media screen and (min-width :$desktop) {
         // margin: 15px;
         max-width: 270px;
-        flex-basis: calc((100%-120px)/4);
+        flex-basis: calc((100% - 120px)/4);
         // margin: 0 30px 0 0;
-        
+
     }
 
 }
 
 .team__card-content {
     text-align: center;
-    @media screen and (min-width: $mobile) {
+
+    @include media (mobile) {
         padding: 30px 122px 24px;
     }
+
     @media screen and (min-width :$tablet) {
-        padding: 30px 74px 24px; 
+        padding: 30px 74px 24px;
     }
+
     @media screen and (min-width :$desktop) {
         padding: 30px 32px;
 
@@ -75,18 +78,15 @@
     letter-spacing: 0.03em;
     margin: 0 0 10px 0;
 
-        &:last-child {
+    &:last-child {
         margin-right: 0;
     }
-        @media screen and (min-width: $mobile) {
-        
-    }
-    @media screen and (min-width :$tablet) {
-        
-    }
-    @media screen and (min-width :$desktop) {
-        
-    }
+
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width :$tablet) {}
+
+    @media screen and (min-width :$desktop) {}
 
 
 
@@ -94,20 +94,16 @@
 }
 
 .team__card-description {
-        color: $grey-color;
+    color: $grey-color;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     margin: 0 0 16px;
-    @media screen and (min-width: $mobile) {
-        
-    }
-    @media screen and (min-width :$tablet) {
-        
-    }
-    @media screen and (min-width :$desktop) {
-        
-    }
-}
 
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width :$tablet) {}
+
+    @media screen and (min-width :$desktop) {}
+}

@@ -7,10 +7,11 @@
     top: 0px;
 
     background: rgba(0, 0, 0, 0.2);
-    
+
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
+    overflow-y: scroll;
 
     transition-property: opacity, visibility;
     transition-duration: 250ms;
@@ -21,13 +22,25 @@
 .modal {
     position: absolute;
     width: 528px;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     background: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @include media(mobile) {
+        width: 450px;
+    }
+
+        @include media(tablet) {
+        width: 450px;
+    }
+
+        @include media(desktop) {
+        width: 528px;
+    }
 }
 
 .backdrop.is-hidden {
@@ -108,7 +121,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: transparent;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     transition-property: border-color;
 
@@ -116,7 +129,7 @@
         border-color: $accent-color;
     }
 
-    &:focus + .modal__icon {
+    &:focus+.modal__icon {
         fill: $accent-color;
     }
 }
@@ -141,7 +154,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     transition-property: border-color;
     resize: none;
@@ -166,7 +179,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:$primary-white-color;
+    background: $primary-white-color;
     fill: $primary-white-color ;
     width: 16px;
     height: 15px;
@@ -185,7 +198,7 @@
     }
 }
 
-.modal__checkbox:checked + .modal__checkbox-fake {
+.modal__checkbox:checked+.modal__checkbox-fake {
     outline-color: $accent-color;
     background-color: $accent-color;
 }
@@ -199,9 +212,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items:center ;
+    align-items: center;
     text-align: center;
-    margin-bottom: 30px ;
+    margin-bottom: 30px;
     margin-top: 10px;
 
     font-weight: 400;
@@ -218,8 +231,3 @@
     width: 200px;
     height: 50px;
 }
-
-
-
-
-
