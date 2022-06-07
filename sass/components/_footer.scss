@@ -1,22 +1,49 @@
 .footer {
-    padding: 60px 215px;
-
+    padding: 60px 0;
     background-color: $background-color;
+
+    @include media (tablet) {
+    }
+
+    @include media (desktop) {}
+}
+
+.address-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media (tablet) {
+        flex-wrap: wrap;
+    }
+
+    @include media (desktop) {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 
 
 .logo__footer {
-    color: $primary-white-color;
     display: inline-block;
+    color: $primary-white-color;
+    padding: 0;
     margin-bottom: 20px;
     margin-right: 0;
 }
 
 // Address
+.address {
+    margin-bottom: 60px;
+}
 
 .address__item {
-    margin-bottom: 9px;
     height: 21px;
+    margin-bottom: 8px;
+
+    @include media (desktop) {
+        margin-bottom: 9px;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -24,7 +51,17 @@
 }
 
 .address__list {
-    width: 231px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media (tablet) {
+        align-items: flex-start;
+    }
+
+    @include media (desktop) {
+        width: 231px;
+    }
 }
 
 .address__link-address {
@@ -56,15 +93,34 @@
 
 .footer .container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+
+    @include media (tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: space-around;
+    }
+
+    @include media (desktop) {
+        align-items: baseline;
+        flex-direction: row;
+    }
 }
 
 .footer__social {
-    margin-left: 70px;
+    text-align: center;
+
+    @include media (desktop) {
+        text-align: start;
+        margin-left: 70px;
+    }
 }
 
 .footer__social-list {
     display: flex;
+    margin-bottom: 60px;
 }
 
 .footer__social-item {
@@ -92,57 +148,82 @@
 .form {
     display: flex;
     flex-direction: column;
-    margin-left: 93px;
-    width: 570px;
+
+    width: 100%;
+    text-align: center;
+
+    @include media (desktop) {
+        text-align: start;
+        margin-left: 93px;
+        width: 570px;
+    }
 }
 
 .form__block {
     display: flex;
-    align-items: flex-end;
-}
-
-.form__input {
-    font-size: 16px;
-    padding: 15px 10px 15px 16px;
-    width: 100%;
-
-    background: $background-color;
-    color: $background-color-for-hero;
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    outline: transparent;
-    transition-property: solid;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:focus {
-        border: 1px solid $accent-color;
-    }
-
-    &::placeholder {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.25;
-        letter-spacing: 0.03em;
-
-        color: rgba(255, 255, 255, 0.6);
-    }
-}
-
-.form__button {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-left: 12px;
 
-    padding: 10px 28px 10px 29px;
+    @include media (desktop) {
+        flex-direction: row;
+    }
 
-    fill: $primary-white-color;
-}
+    .form__input {
+        margin-bottom: 20px;
+        padding: 15px 10px 15px 16px;
+        width: 100%;
 
-.form__icon {
-    padding: 0;
-    margin-left: 10px;
+        font-size: 16px;
+        background: $background-color;
+        color: $background-color-for-hero;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        outline: transparent;
+        transition-property: solid;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus {
+            border: 1px solid $accent-color;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @include media (tablet) {
+            width: 450px;
+        }
+
+        @include media (desktop) {
+            margin: 0;
+        }
+    }
+
+    .form__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+
+        padding: 10px 28px 10px 29px;
+
+        fill: $primary-white-color;
+
+        @include media (desktop) {
+            margin-left: 12px;
+        }
+    }
+
+    .form__icon {
+        padding: 0;
+        margin-left: 10px;
+    }
 }

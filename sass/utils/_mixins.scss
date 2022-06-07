@@ -33,4 +33,21 @@
         @content;
     }
 }
+// not-desktop
+@if $type =='not-desktop' {
+    @media screen and (max-width: #{$desktop - 0.02}) {
+        @content;
+    }
+}
+
+// retina
+@if $type == 'retina' {
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixal-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
 }

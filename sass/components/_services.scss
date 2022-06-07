@@ -1,12 +1,9 @@
 .services {
-    @media screen and (max-width: 1199px) {
+    @include media (not-desktop) {
         display: none;
     }
-
-    @media screen and (min-width :$tablet) {}
-
     @media screen and (min-width :$desktop) {
-        // padding: 47px 0 94px;
+        padding: 47px 0;
     }
 }
 

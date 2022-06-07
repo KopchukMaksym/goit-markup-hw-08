@@ -3,10 +3,14 @@
 
     @media screen and (min-width: $mobile) {}
 
+    padding: 60px 0;
+
     @media screen and (min-width :$tablet) {}
 
+    padding: 60px 0;
+
     @media screen and (min-width :$desktop) {
-        padding: 94px 0;
+        padding: 47px 0;
 
     }
 }
@@ -55,19 +59,14 @@
 
 .team__card-content {
     text-align: center;
-
-    @include media (mobile) {
-        padding: 30px 122px 24px;
-    }
-
-    @media screen and (min-width :$tablet) {
-        padding: 30px 74px 24px;
-    }
-
-    @media screen and (min-width :$desktop) {
+    @include media (desktop) {
         padding: 30px 32px;
-
     }
+    
+    @include media (not-desktop) {
+            padding: 30px 0 24px;
+    }
+
 
 }
 
@@ -81,16 +80,6 @@
     &:last-child {
         margin-right: 0;
     }
-
-    @media screen and (min-width: $mobile) {}
-
-    @media screen and (min-width :$tablet) {}
-
-    @media screen and (min-width :$desktop) {}
-
-
-
-
 }
 
 .team__card-description {
@@ -100,10 +89,4 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     margin: 0 0 16px;
-
-    @media screen and (min-width: $mobile) {}
-
-    @media screen and (min-width :$tablet) {}
-
-    @media screen and (min-width :$desktop) {}
 }

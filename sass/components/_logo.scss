@@ -4,24 +4,20 @@
     font-family: $secondary-font-family;
     text-decoration: none;
     letter-spacing: 0.03em;
-    @include media (mobile) {
-            padding: 15px 0 15px;
-        font-size: 24px;
-        line-height: 1.166;
-    }
+    font-size: 24px;
+    line-height: 1.19;
+    padding: 15px 0;
+
     @include media (tablet) {
         margin-right: 88px;
-        
-        font-size: 24px;
-        line-height: 1.166;
+        padding: 24px 0 24px 0;
     }
+
     @include media (desktop) {
-            margin-right: 93px;
-        padding: 24px 0 25px 0 ;
-        
+        margin-right: 93px;
+
         font-size: 26px;
-        line-height: 1.19;
-}
+    }
 
 }
 

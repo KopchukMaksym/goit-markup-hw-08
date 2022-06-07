@@ -1,0 +1,134 @@
+// Contacts
+
+.contacts {
+    @include media (mobile) {
+        flex-direction: column;
+    }
+
+    @include media (tablet-only) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @include media (desktop) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        // margin-left: 305px;
+    }
+}
+
+
+.contacts__item {
+    @include media (tablet-only) {
+
+        margin-bottom: 32px;
+    }
+
+}
+
+.contacts__item:not(:last-child) {
+    @include media (tablet) {
+        margin-bottom: 10px;
+    }
+
+    @include media(tablet-only) {
+        margin-bottom: 64px;
+    }
+
+    @include media (desktop) {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+}
+
+
+.contacts__link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $grey-color;
+    fill: $grey-color;
+    line-height: 1.166;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-property: color, fill;
+
+
+
+    @include media (tablet-only) {
+        font-size: 24px;
+    }
+
+    @include media(tablet) {
+        display: flex;
+        font-size: 12px;
+
+        &:hover,
+        &focus {
+            color: $accent-color;
+            fill: $accent-color;
+        }
+    }
+
+    @include media (desktop) {
+        display: flex;
+        align-items: center;
+        padding: 32px 0;
+
+        font-size: 14px;
+        line-height: 1.14;
+
+        &:hover,
+        &focus {
+            color: $accent-color;
+            fill: $accent-color;
+        }
+    }
+}
+
+.contacts__link--accent {
+    @include media (tablet-only) {
+        font-size: 34px;
+        line-height: 1.17px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+
+        color: $accent-color;
+
+        margin-bottom: 32px;
+    }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+
+    @include media (mobile) {
+        display: none;
+
+    }
+
+    @include media (tablet) {
+        display: block;
+        width: 14px;
+        height: 10px;
+    }
+
+    @include media (desktop) {
+        display: block;
+        width: 16px;
+        height: 12px;
+    }
+}
+
+.contacts__icon-tell {
+    @include media (tablet) {
+        width: 10px;
+        height: 14px;
+    }
+
+    @include media (desktop) {
+        width: 10px;
+        height: 16px;
+    }
+}

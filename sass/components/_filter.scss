@@ -1,21 +1,25 @@
 .filter__list {
     display: flex;
 
-    @include media (mobile)  {
+    @include media (mobile) {
         flex-wrap: wrap;
     }
-
-@include media (tablet) {
-    
-}
-@include media (desktop) {
-    justify-content: center;
-    margin-bottom: 50px;
-}
+    @include media (tablet) {
+        justify-content: center;
+    }
+    @include media (desktop) {
+        justify-content: center;
+        margin-bottom: 50px;
+    }
 }
 
 .filter__item {
     margin-right: 8px;
+    margin-bottom: 15px;
+
+    @include media (desktop) {
+        margin-bottom: 0
+    }
 
     &:last-child {
         margin-right: 0;

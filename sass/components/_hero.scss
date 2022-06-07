@@ -2,6 +2,8 @@
 
 .hero {
     margin: auto;
+    max-width: 1600px;
+    width: 100%;
 
     background-color: $background-color-for-hero;
 
@@ -10,17 +12,9 @@
         url(../images/team.jpg);
     background-repeat: no-repeat;
     background-position: center;
-
-    @include media(mobile) {
-        max-width: 480px;
-    }
-
-    @include media(tablet) {
-        max-width: 768px;
-    }
-
-    @include media(desktop) {
-        max-width: 1600px;
+    
+    @include media(not-desktop) {
+        padding: 118px 0;
     }
 }
 
@@ -29,14 +23,23 @@
 }
 
 .hero__title {
-    max-width: 696px;
     margin: 0 auto 30px;
 
     color: $primary-white-color;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @include media(not-desktop) {
+        max-width: 360px;
+        font-size: 26px;
+        line-height: 1.61;
+    }
+
+    @include media(desktop) {
+        max-width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
