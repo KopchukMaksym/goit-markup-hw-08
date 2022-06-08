@@ -2,20 +2,48 @@
 
 .hero {
     margin: auto;
+    padding: 200px 0;
     max-width: 1600px;
     width: 100%;
 
     background-color: $background-color-for-hero;
 
-    padding: 200px 0;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)),
-        url(../images/team.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     
     @include media(not-desktop) {
         padding: 118px 0;
     }
+
+    background-image:$linear-gradient,
+        url(../images/hero/bg_sm.jpg);
+
+    @include media (retina) {
+        background-image:$linear-gradient,
+        url(../images/hero/bg_sm@2x.jpg);
+    }
+
+    @include media (tablet) {
+        background-image: $linear-gradient,
+            url(../images/hero/bg_md.jpg);
+
+    @include media (retina) {
+            background-image:$linear-gradient,
+                url(../images/hero/bg_md@2x.jpg);
+        }
+    }
+
+    @include media (desktop) {
+        background-image: $linear-gradient,
+            url(../images/hero/bg_lg.jpg);
+
+        @include media (retina) {
+            background-image: $linear-gradient,
+                url(../images/hero/bg_lg@2x.jpg);
+        }
+    }
+
 }
 
 .hero__container {

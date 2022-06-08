@@ -21,17 +21,17 @@
 
     @include media (mobile) {
         max-width: 210px;
-        flex-basis: calc((100% - 60px)/2);
+        flex-basis: calc((100% - 60px) / 2);
     }
 
     @include media (tablet) {
         max-width: 226px;
-        flex-basis: calc((100% - 90px)/3);
+        flex-basis: calc((100% - 90px) / 3);
     }
 
     @include media (desktop) {
         max-width: 170px;
-        flex-basis: calc((100% - 180px)/6);
+        flex-basis: calc((100% - 180px) / 6);
 
     }
 

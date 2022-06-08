@@ -220,13 +220,22 @@
     margin-top: 10px;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+        font-size: 12px;
+        line-height: 1.166;
+        letter-spacing: 0.03em;
 
-    color: $grey-color;
-    cursor: pointer;
-}
+    
+        color: $grey-color;
+        cursor: pointer;
+        
+        @include media (desktop) {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+        }
+        }
+
 
 .modal__button {
     margin: 0 auto;

@@ -293,7 +293,7 @@ body.no-scroll {
 }
 
 .image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -746,18 +746,49 @@ body.no-scroll {
 
 .hero {
   margin: auto;
+  padding: 200px 0;
   max-width: 1600px;
   width: 100%;
   background-color: #C4C4C4;
-  padding: 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/team.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_sm.jpg);
 }
 
 @media screen and (max-width: 1199.98px) {
   .hero {
     padding: 118px 0;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixal-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_sm@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_md.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixal-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_md@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_lg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixal-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.475), rgba(47, 48, 58, 0.475)), url(../images/hero/bg_lg@2x.jpg);
   }
 }
 
@@ -1089,21 +1120,21 @@ body.no-scroll {
 @media screen and (min-width: 480px) {
   .clients__item {
     max-width: 210px;
-    flex-basis: calc((100% - 60px)/2);
+    flex-basis: calc((100% - 60px) / 2);
   }
 }
 
 @media screen and (min-width: 768px) {
   .clients__item {
     max-width: 226px;
-    flex-basis: calc((100% - 90px)/3);
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__item {
     max-width: 170px;
-    flex-basis: calc((100% - 180px)/6);
+    flex-basis: calc((100% - 180px) / 6);
   }
 }
 
@@ -1562,11 +1593,20 @@ body.no-scroll {
   margin-bottom: 30px;
   margin-top: 10px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__label-agreement {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal__button {
@@ -1658,26 +1698,26 @@ body.no-scroll {
 }
 
 .portfolio__card {
-  max-width: 450px;
+  margin: 15px;
   flex-basis: calc((100% - 30px) / 1);
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__card {
-    max-width: 354px;
     flex-basis: calc((100% - 60px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio__card {
-    width: 100%;
-    flex-basis: calc((100%-90px) / 3);
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: box-shadow;
@@ -1694,6 +1734,7 @@ body.no-scroll {
 }
 
 .portfolio__block {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: 0;
@@ -1735,8 +1776,6 @@ body.no-scroll {
 }
 
 .portfolio__overlay {
-  width: 370px;
-  height: 294px;
   position: relative;
   overflow: hidden;
   z-index: -1;
