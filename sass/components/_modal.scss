@@ -12,6 +12,7 @@
     visibility: visible;
     pointer-events: initial;
     overflow-y: scroll;
+    z-index: 3;
 
     transition-property: opacity, visibility;
     transition-duration: 250ms;
@@ -149,6 +150,7 @@
 }
 
 .modal__label-textarea {
+
     padding: 11px 16px;
     margin-top: 4px;
     outline: transparent;
@@ -173,6 +175,10 @@
 
         color: rgba(117, 117, 117, 0.5);
     }
+
+    @include media (mobile-only) {
+        height: 85px;
+    }
 }
 
 // chekbox
@@ -183,8 +189,8 @@
     align-items: center;
     background: $primary-white-color;
     fill: $primary-white-color ;
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     margin-right: 8px;
 
     border-radius: 4px;

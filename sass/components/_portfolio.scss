@@ -91,6 +91,10 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
+    @include media (mobile-only) {
+        padding: 24px;
+        font-size: 14px;
+    }
 }
 
 .portfolio__overlay {

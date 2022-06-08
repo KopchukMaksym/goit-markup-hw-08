@@ -410,12 +410,7 @@ body.no-scroll {
 
 .nav__list {
   display: flex;
-}
-
-@media screen and (min-width: 480px) {
-  .nav__list {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -432,10 +427,8 @@ body.no-scroll {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .nav__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
+.nav__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -458,30 +451,15 @@ body.no-scroll {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: color;
+  font-size: 40px;
+  line-height: 1.175;
 }
 
 .nav__link:hover, .nav__link:focus {
   color: #2196F3;
 }
 
-@media screen and (min-width: 480px) {
-  .nav__link {
-    font-size: 40px;
-    line-height: 1.175;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .nav__link {
-    font-size: 14px;
-    line-height: 1.14;
-    position: relative;
-    display: block;
-    padding: 32px 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
   .nav__link {
     font-size: 14px;
     line-height: 1.14;
@@ -515,13 +493,8 @@ body.no-scroll {
 
 .contacts {
   display: flex;
-}
-
-@media screen and (min-width: 480px) {
-  .contacts {
-    flex-direction: column-reverse;
-    margin-bottom: 64px;
-  }
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
@@ -573,9 +546,10 @@ body.no-scroll {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   transition-property: color, fill;
+  font-size: 20px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 480px) {
   .contacts__link {
     font-size: 24px;
   }
@@ -609,22 +583,23 @@ body.no-scroll {
 @media screen and (max-width: 767.98px) {
   .contacts__link--accent {
     font-size: 34px;
+    color: #2196F3;
     line-height: 1.17;
     font-weight: 500;
     letter-spacing: 0.02em;
-    color: #2196F3;
     margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 479.98px) {
+  .contacts__link--accent {
+    font-size: 26px;
   }
 }
 
 .contacts__icon {
   margin-right: 10px;
-}
-
-@media screen and (min-width: 480px) {
-  .contacts__icon {
-    display: none;
-  }
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -926,22 +901,16 @@ body.no-scroll {
   line-height: 1.14;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 @media screen and (min-width: 480px) {
   .feature__title {
-    text-align: center;
     display: block;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .feature__title {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
   .feature__title {
     text-align: left;
   }
@@ -1224,12 +1193,6 @@ body.no-scroll {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
-  .address__list {
-    align-items: flex-start;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .address__list {
     width: 231px;
@@ -1268,6 +1231,7 @@ body.no-scroll {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: baseline;
   }
 }
 
@@ -1415,6 +1379,7 @@ body.no-scroll {
   visibility: visible;
   pointer-events: initial;
   overflow-y: scroll;
+  z-index: 3;
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1567,14 +1532,20 @@ body.no-scroll {
   color: rgba(117, 117, 117, 0.5);
 }
 
+@media screen and (max-width: 479.98px) {
+  .modal__label-textarea {
+    height: 85px;
+  }
+}
+
 .modal__checkbox-fake {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #FFFFFF;
   fill: #FFFFFF;
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   margin-right: 8px;
   border-radius: 4px;
   outline: 2px solid #212121;
@@ -1632,10 +1603,12 @@ body.no-scroll {
 .filter__list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
   .filter__list {
+    margin-bottom: 30px;
     justify-content: center;
   }
 }
@@ -1649,12 +1622,11 @@ body.no-scroll {
 
 .filter__item {
   margin-right: 8px;
-  margin-bottom: 15px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767.98px) {
   .filter__item {
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -1783,6 +1755,13 @@ body.no-scroll {
   letter-spacing: 0.03em;
   color: #FFFFFF;
   background: rgba(33, 150, 243, 0.9);
+}
+
+@media screen and (max-width: 479.98px) {
+  .portfolio__text {
+    padding: 24px;
+    font-size: 14px;
+  }
 }
 
 .portfolio__overlay {

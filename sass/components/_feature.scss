@@ -67,17 +67,13 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
 
+    text-align: center;
 
     @include media (mobile) {
-        text-align: center;
         display: block;
     }
 
     @include media (tablet) {
-        text-align: left;
-    }
-
-    @include media (desktop) {
         text-align: left;
     }
 }
