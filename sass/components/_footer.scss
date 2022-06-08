@@ -53,6 +53,7 @@
 
     @include media (desktop) {
         width: 231px;
+        align-items: flex-start;
     }
 }
 
