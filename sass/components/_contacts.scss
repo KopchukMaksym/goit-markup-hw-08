@@ -1,20 +1,22 @@
 // Contacts
 
 .contacts {
+    display: flex;
+
     @include media (mobile) {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-bottom: 64px;
     }
 
-    @include media (tablet-only) {
-        display: flex;
-        flex-direction: column-reverse;
+    @include media (tablet) {
+        flex-direction: column;
+        margin-bottom: 0;
     }
 
     @include media (desktop) {
         display: flex;
         align-items: center;
         flex-direction: row;
-        // margin-left: 305px;
     }
 }
 
@@ -33,7 +35,7 @@
     }
 
     @include media(tablet-only) {
-        margin-bottom: 64px;
+        margin-bottom: 0;
     }
 
     @include media (desktop) {

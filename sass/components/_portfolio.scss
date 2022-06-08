@@ -1,0 +1,100 @@
+.portfolio__section {
+    padding: 94px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio__section {
+        padding: 94px 0;
+    }
+}
+
+.portfolio__list {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__card {
+    margin: 15px;
+    flex-basis: calc((100% - 30px) / 1);
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio__card {
+        flex-basis: calc((100% - 60px) / 2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolio__card {
+        flex-basis: calc((100% - 90px) / 3);
+    }
+}
+
+.portfolio__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-property: box-shadow;
+}
+
+.portfolio__link:hover,
+.portfolio__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio__link:hover .portfolio__text,
+.portfolio__link:focus .portfolio__text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio__block {
+    flex-grow: 1;
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+}
+
+.portfolio__title {
+    margin: 0 0 4px;
+    color: #212121;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio__subtitle {
+    margin: 0;
+    color: #757575;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+}
+
+.portfolio__text {
+    position: absolute;
+    transform: translateY(100%);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-property: transform, opacity;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    padding: 63px 24px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio__overlay {
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}

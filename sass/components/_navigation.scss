@@ -74,6 +74,7 @@
 
 
 .nav__link.current {
+            color: $accent-color;
     &:after {
         content: "";
         position: absolute;
@@ -85,17 +86,17 @@
 
         background: $accent-color;
         border-radius: 2px;
-
+        
     }
-
+    
     @include media (mobile) {}
-
+    
     @include media(tablet) {}
-
+    
     @include media (desktop) {
         color: $accent-color;
         position: relative;
-
+        
 
     }
 }
