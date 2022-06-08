@@ -30,7 +30,6 @@
     }
 
     @include media (desktop) {
-        // margin-right: 305px;
         margin-bottom: 0;
     }
 }
@@ -44,16 +43,16 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
     transition-property: color;
-    
-        &:hover,
-        &:focus {
-            color: $accent-color;
-        }
-        
-        @include media (mobile) {
-            font-size: 40px;
-            line-height: 1.175;
-        }
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    @include media (mobile) {
+        font-size: 40px;
+        line-height: 1.175;
+    }
 
     @include media(tablet) {
         font-size: 14px;
@@ -61,20 +60,21 @@
         position: relative;
         display: block;
         padding: 32px 0;
-        }
-
-        @include media (desktop) {
-            font-size: 14px;
-            line-height: 1.14;
-            position: relative;
-            display: block;
-            padding: 32px 0;
-        }
     }
+
+    @include media (desktop) {
+        font-size: 14px;
+        line-height: 1.14;
+        position: relative;
+        display: block;
+        padding: 32px 0;
+    }
+}
 
 
 .nav__link.current {
-            color: $accent-color;
+    color: $accent-color;
+
     &:after {
         content: "";
         position: absolute;
@@ -86,17 +86,10 @@
 
         background: $accent-color;
         border-radius: 2px;
-        
     }
-    
-    @include media (mobile) {}
-    
-    @include media(tablet) {}
-    
+
     @include media (desktop) {
         color: $accent-color;
         position: relative;
-        
-
     }
 }

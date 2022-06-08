@@ -2,8 +2,9 @@
     @include media (not-desktop) {
         display: none;
     }
+
     @media screen and (min-width :$desktop) {
-        padding: 47px 0;
+        padding: 47px 0 94px;
     }
 }
 

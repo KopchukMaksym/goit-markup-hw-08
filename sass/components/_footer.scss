@@ -2,10 +2,6 @@
     padding: 60px 0;
     background-color: $background-color;
 
-    @include media (tablet) {
-    }
-
-    @include media (desktop) {}
 }
 
 .address-container {
@@ -15,6 +11,10 @@
 
     @include media (tablet) {
         flex-wrap: wrap;
+    }
+
+    @include media (not-desktop) {
+        margin-bottom: 60px;
     }
 
     @include media (desktop) {
@@ -32,10 +32,6 @@
     margin-right: 0;
 }
 
-// Address
-.address {
-    margin-bottom: 60px;
-}
 
 .address__item {
     height: 21px;
@@ -109,8 +105,11 @@
 }
 
 .footer__social {
-    margin-bottom: 60px;
     text-align: center;
+
+    @include media (tablet-only) {
+        margin-bottom: 60px;
+    }
 
     @include media (desktop) {
         text-align: start;

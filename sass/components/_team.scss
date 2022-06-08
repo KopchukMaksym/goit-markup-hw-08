@@ -1,17 +1,9 @@
 .team {
     background-color: #F5F4FA;
-
-    @media screen and (min-width: $mobile) {}
-
-    padding: 60px 0;
-
-    @media screen and (min-width :$tablet) {}
-
     padding: 60px 0;
 
     @media screen and (min-width :$desktop) {
-        padding: 47px 0;
-
+        padding: 94px 0;
     }
 }
 
@@ -42,10 +34,8 @@
     }
 
     @media screen and (min-width :$desktop) {
-        // margin: 15px;
         max-width: 270px;
         flex-basis: calc((100% - 120px)/4);
-        // margin: 0 30px 0 0;
 
     }
 
@@ -53,12 +43,13 @@
 
 .team__card-content {
     text-align: center;
+
     @include media (desktop) {
         padding: 30px 32px;
     }
-    
+
     @include media (not-desktop) {
-            padding: 30px 0 24px;
+        padding: 30px 0 24px;
     }
 
 

@@ -1,12 +1,11 @@
 .filter__list {
     display: flex;
+    flex-wrap: wrap;
 
-    @include media (mobile) {
-        flex-wrap: wrap;
-    }
     @include media (tablet) {
         justify-content: center;
     }
+
     @include media (desktop) {
         justify-content: center;
         margin-bottom: 50px;

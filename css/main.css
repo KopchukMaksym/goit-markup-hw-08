@@ -609,7 +609,7 @@ body.no-scroll {
 @media screen and (max-width: 767.98px) {
   .contacts__link--accent {
     font-size: 34px;
-    line-height: 1.17px;
+    line-height: 1.17;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #2196F3;
@@ -964,7 +964,7 @@ body.no-scroll {
 
 @media screen and (min-width: 1200px) {
   .services {
-    padding: 47px 0;
+    padding: 47px 0 94px;
   }
 }
 
@@ -1002,12 +1002,11 @@ body.no-scroll {
 .team {
   background-color: #F5F4FA;
   padding: 60px 0;
-  padding: 60px 0;
 }
 
 @media screen and (min-width: 1200px) {
   .team {
-    padding: 47px 0;
+    padding: 94px 0;
   }
 }
 
@@ -1183,6 +1182,12 @@ body.no-scroll {
   }
 }
 
+@media screen and (max-width: 1199.98px) {
+  .address-container {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .address-container {
     align-items: flex-start;
@@ -1196,10 +1201,6 @@ body.no-scroll {
   padding: 0;
   margin-bottom: 20px;
   margin-right: 0;
-}
-
-.address {
-  margin-bottom: 60px;
 }
 
 .address__item {
@@ -1278,8 +1279,13 @@ body.no-scroll {
 }
 
 .footer__social {
-  margin-bottom: 60px;
   text-align: center;
+}
+
+@media screen and (max-width: 767.98px) {
+  .footer__social {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1420,7 +1426,7 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 528px;
-  width: 100;
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1625,12 +1631,7 @@ body.no-scroll {
 
 .filter__list {
   display: flex;
-}
-
-@media screen and (min-width: 480px) {
-  .filter__list {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
