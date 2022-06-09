@@ -12,7 +12,12 @@
 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    transition-property: opacity;
+    transition-property: opacity fill;
+
+    &:hover,
+    &:focus{
+        fill: $accent-color;
+    }
 
     & .menu__link--open {
         opacity: 0;
